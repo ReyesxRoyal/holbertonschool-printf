@@ -12,11 +12,11 @@ int printString(va_list args)
 {
 	int i = 0;
 
-	char *str = va_arg(args, char *);
-	if (str == NULL)
+	char *str = va_arg(args, char *); /* updated this line*/
+	/*if (str == NULL)
 		{
 			str = "(null)";
-		}
+		}*/
 	while (str[i] != '\0')
 		{
 			_putchar(str[i]);
