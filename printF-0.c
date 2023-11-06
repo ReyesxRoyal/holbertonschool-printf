@@ -51,12 +51,3 @@ while(*format) {
 
  return chara_print;
 }
-
-int main(){
- _printf("Xbox\n");
- _printf("%c\n", 'X');
- _printf("%s\n", "PS5");
- _printf("%%\n");
- return 0;
-}
-
