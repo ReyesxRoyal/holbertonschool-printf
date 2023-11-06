@@ -17,7 +17,11 @@ int _printf(const char *format, ...)
 
     while (format[i]) 
     {
-        if (format[i] != '%') 
+        if (format[i] == NULL)/*new code remove and restore to if else*/
+        {
+            return -1;
+        }
+        else if (format[i] != '%') 
         {
             _putchar(format[i]);
             count++;
