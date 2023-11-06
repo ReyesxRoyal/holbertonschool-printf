@@ -42,18 +42,18 @@ int _printf(const char *format, ...)
                putchar(c);
                chara_print++;
            }
-           else if (*format == 's')
-           {
-               char *str = va_arg(Gaming_Consoles, char*);
-               int str_len = 0;
-               while (str[str_len] != '\0')
-               {
-                  str_len++;
-               }
-               fwrite(str, 1, str_len, stdout);
-               chara_print += str_len;
-           }
-       }
+    else if (*format == 's')
+{
+   char *str = va_arg(Gaming_Consoles, char*);
+   int str_len = 0;
+   while (str[str_len] != '\0')
+   {
+       str_len++;
+   }
+   fwrite(str, 1, str_len, stdout);
+   chara_print += str_len;
+}
+}
        format++;
    }
    va_end(Gaming_Consoles);
