@@ -14,14 +14,13 @@ int _printf(const char *format, ...)
 	/* Initalizes the variable arguments list */
 	va_list args;
 	va_start (args, format);
-
+    if (format == NULL)
+    {
+        return -1;
+    }
     while (format[i]) 
     {
-        if (format[i] == NULL)/*new code remove and restore to if else*/
-        {
-            return -1;
-        }
-        else if (format[i] != '%') 
+        if (format[i] != '%') 
         {
             _putchar(format[i]);
             count++;
