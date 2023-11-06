@@ -24,29 +24,32 @@ int _printf(const char *format, ...)
         } 
         else 
         {
-            i++;
-            if (format[i] == '%')
+            i++; /* new code inserted here */
+            while (format[i] != '\0')
             {
-                _putchar('%');
-                count++;
-            }
-            else if (format[i] == 'c') 
-            {
-                count += printChar(args);
-            } 
-            else if (format[i] == 's') 
-            {
-                count += printString(args);
-            } 
-            else if (format[i] == 'd' || format[i] == 'i') 
-            {
-                count += printNum(args);
-            } 
-            else 
-            {
-                _putchar('%');
-                _putchar(format[i]);
-                count += 2;
+                if (format[i] == '%')
+                {
+                    _putchar('%');
+                    count++;
+                }
+                else if (format[i] == 'c') 
+                {
+                    count += printChar(args);
+                } 
+                else if (format[i] == 's') 
+                {
+                    count += printString(args);
+                } 
+                else if (format[i] == 'd' || format[i] == 'i') 
+                {
+                    count += printNum(args);
+                } 
+                else 
+                {
+                    _putchar('%');
+                    _putchar(format[i]);
+                    count += 2;
+                }
             }
         }
         i++;
@@ -54,6 +57,4 @@ int _printf(const char *format, ...)
 
     va_end(args);
     return count;
-}
-
-	
+}	
