@@ -19,7 +19,7 @@ int printString(va_list args)
 		}
 	while (str[i] != '\0')
 		{
-			_putchar("(null)");
+			_putchar(str[i]);
 			i++;
 		}
 	return i;
