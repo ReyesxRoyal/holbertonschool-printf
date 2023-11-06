@@ -50,6 +50,7 @@ int _printf(const char *format, ...)
                     _putchar(format[i]);
                     count += 2;
                 }
+                i++; /* new code test */
             }
         }
         i++;
