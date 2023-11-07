@@ -1,9 +1,9 @@
 #include "main.h"
 /*
-printChar will handle the %c
-printString will handle the %s
-printNum will handle the %d and %i
-*/
+ *printChar will handle the %c
+ *printString will handle the %s
+ *printNum will handle the %d and %i
+ */
 
 int printChar(va_list args) 
 {
