@@ -2,8 +2,9 @@
 
 /**
  * printChar - handles the %c
- * @ args: character that is being counted
+ * @args: character that is being counted
  * 
+ * Description: this will conatin a detailed description.
  * Return: number of chars counted
 */
 int printChar(va_list args) 
@@ -13,8 +14,9 @@ int printChar(va_list args)
 }
 /**
  * printString - handles the %s
- * @ args: string that is being counted
+ * @args: string that is being counted
  * 
+ * Description: this will conatin a detailed description.
  * Return: number of chars counted
 */
 int printString(va_list args) 
@@ -35,8 +37,9 @@ int printString(va_list args)
 }
 /**
  * printNum - handles the %d & %i
- * @ args: number that is being counted
+ * @args: number that is being counted
  * 
+ * Description: this will conatin a detailed description.
  * Return: number of chars counted
 */
 int printNum(va_list args) 
