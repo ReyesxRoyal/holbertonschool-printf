@@ -1,16 +1,22 @@
 #include "main.h"
-/*
- *printChar will handle the %c
- *printString will handle the %s
- *printNum will handle the %d and %i
- */
 
+/**
+ * printChar - handles the %c
+ * @ args: character that is being counted
+ * 
+ * Return: number of chars counted
+*/
 int printChar(va_list args) 
 {
 	int c = va_arg(args, int);
 	return _putchar(c);
 }
-
+/**
+ * printString - handles the %s
+ * @ args: string that is being counted
+ * 
+ * Return: number of chars counted
+*/
 int printString(va_list args) 
 {
 	int i = 0;
@@ -27,7 +33,12 @@ int printString(va_list args)
 		}
 	return i;
 }
-
+/**
+ * printNum - handles the %d & %i
+ * @ args: number that is being counted
+ * 
+ * Return: number of chars counted
+*/
 int printNum(va_list args) 
 {
 	int num = va_arg(args, int);
