@@ -1,10 +1,12 @@
 #include "main.h"
-
-/*
- * this code is for the team project
- * the _printf function will handle the format specifiers c,s,%,d,i
- */
-
+/**
+ * _printf - created to function in the same way as the printf() function
+ * @format: this is the format string where specifiers will be formated
+ * @...: this is how the variable arguments are able to be included
+ * 
+ * Description: the _printf function will handle the format specifiers c,s,%,d,i
+ * Return: prints the total amount of chars counted.
+*/
 int _printf(const char *format, ...)
 {
 	/* Starts the count for each character printed and creats variable for iteration */
