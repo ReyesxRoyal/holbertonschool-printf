@@ -1,14 +1,17 @@
 #include "main.h"
+/*
+printChar will handle the %c
+printString will handle the %s
+printNum will handle the %d and %i
+*/
 
-/* this handles %c */
-int printChar(va_list args)
+int printChar(va_list args) 
 {
 	int c = va_arg(args, int);
 	return _putchar(c);
 }
 
-/* this handles %s */
-int printString(va_list args)
+int printString(va_list args) 
 {
 	int i = 0;
 
@@ -25,8 +28,7 @@ int printString(va_list args)
 	return i;
 }
 
-/* this will handle %d and %i */
-int printNum(va_list args)
+int printNum(va_list args) 
 {
 	int num = va_arg(args, int);
 	int count = 0;
@@ -36,19 +38,17 @@ int printNum(va_list args)
 	int dig;
 	int i;
 
-	/* this handles negative numbers */
-	if(num < 0) 
+	if(num < 0) /* this handles negative numbers */
 	{
 		_putchar('-');
-		num = -num;
 		count++;
+		num = -num;
 	}
 
-	/* this handles 0 */
-	if(num == 0)
+	if(num == 0) /* this handles 0 */
 	{
 		_putchar('0');
-		return 1;
+		return count++;
 	}
 	else
 	{
