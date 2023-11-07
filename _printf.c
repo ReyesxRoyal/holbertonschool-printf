@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
             {
                 count += printString(args);
             } 
-            /*else if (format[i] == 'd' || format[i] == 'i') 
+            else if (format[i] == 'd' || format[i] == 'i') 
             {
                 count += printNum(args);
             } 
@@ -56,7 +56,7 @@ int _printf(const char *format, ...)
                 _putchar('%');
                 _putchar(format[i]);
                 count += 2;
-            }*/
+            }
         }
         i++;
     }
