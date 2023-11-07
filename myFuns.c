@@ -40,6 +40,7 @@ int printNum(va_list args)
 	if(num < 0) 
 	{
 		_putchar('-');
+		num = -num;
 		count++;
 	}
 
