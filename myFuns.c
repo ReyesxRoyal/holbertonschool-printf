@@ -35,18 +35,20 @@ int printNum(va_list args)
 	int divisor;
 	int dig;
 	int i;
-	/* this handles 0 */
-	if(num == 0)
-	{
-		_putchar('0');
-		return count++;
-	}
 
-	if (num < 0)
+	/* this handles negative numbers */
+	if(num < 0) 
 	{
 		_putchar('-');
 		num = -num;
 		count++;
+	}
+
+	/* this handles 0 */
+	if(num == 0)
+	{
+		_putchar('0');
+		return 1;
 	}
 	else
 	{
