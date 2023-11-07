@@ -64,7 +64,7 @@ int printNum(va_list args)
 	if (num == 0) /* this handles 0 */
 	{
 		_putchar('0');
-		return (count++);
+		return (1);
 	}
 	else
 	{
