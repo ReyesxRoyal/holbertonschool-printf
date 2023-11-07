@@ -30,6 +30,10 @@ Don't reproduced the buffer handling of the C library printf function. Don't han
 .B %i
 - Prints a number as integer.
 
+.br
+.B %%
+- Prints a percent sign.
+
 .SH AUTHOR
 Written by Rasheed White and Collin Ballard.
 
