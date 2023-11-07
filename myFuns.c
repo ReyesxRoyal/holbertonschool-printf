@@ -1,18 +1,31 @@
 #include "main.h"
 
-/* this handles %c */
+/**
+ * printChar - handles the %c
+ * @args: character that is being counted
+ *
+ * Description: this will conatin a detailed description.
+ * Return: number of chars counted
+*/
 int printChar(va_list args)
 {
 	int c = va_arg(args, int);
-	return _putchar(c);
-}
 
-/* this handles %s */
-int printString(va_list args)
+	return (_putchar(c));
+}
+/**
+ * printString - handles the %s
+ * @args: string that is being counted
+ * 
+ * Description: this will conatin a detailed description.
+ * Return: number of chars counted
+*/
+int printString(va_list args) 
 {
 	int i = 0;
 
 	char *str = va_arg(args, char *);
+
 	if (str == NULL)
 		{
 			str = "(null)";
@@ -22,11 +35,16 @@ int printString(va_list args)
 			_putchar(str[i]);
 			i++;
 		}
-	return i;
+	return (i);
 }
-
-/* this will handle %d and %i */
-int printNum(va_list args)
+/**
+ * printNum - handles the %d & %i
+ * @args: number that is being counted
+ * 
+ * Description: this will conatin a detailed description.
+ * Return: number of chars counted
+*/
+int printNum(va_list args) 
 {
 	int num = va_arg(args, int);
 	int count = 0;
@@ -36,37 +54,34 @@ int printNum(va_list args)
 	int dig;
 	int i;
 
-	/* this handles negative numbers */
-	if(num < 0) 
+	if (num < 0) /* this handles negative numbers */
 	{
 		_putchar('-');
-		num = -num;
 		count++;
+		num = -num;
 	}
 
-	/* this handles 0 */
-	if(num == 0)
+	if (num == 0) /* this handles 0 */
 	{
 		_putchar('0');
-		/*count++;*/
-		return 1;
+		return (1);
 	}
 	else
 	{
 		digits = 0;
 		temp = num;
-		while(temp != 0)
+		while (temp != 0)
 		{
 			temp /= 10;
 			digits++;
 		}
 
 		divisor = 1;
-		for(i = 1; i < digits; i++)
+		for (i = 1; i < digits; i++)
 		{
 			divisor *= 10;
 		}
-		while(divisor > 0)
+		while (divisor > 0)
 		{
 			dig = num / divisor;
 			_putchar(dig + '0');
@@ -75,5 +90,5 @@ int printNum(va_list args)
 			divisor /= 10;
 		}
 	}
-	return count;
+	return (count);
 }
