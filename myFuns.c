@@ -28,11 +28,11 @@ int printString(va_list args)
 /* this will handle %d and %i */
 int printNum(va_list args)
 {
-	long long num = va_arg(args, long long);
+	int num = va_arg(args, int);
 	int count = 0;
 	int digits;
-	long long temp;
-	long long divisor;
+	int temp;
+	int divisor;
 	int dig;
 	int i;
 
